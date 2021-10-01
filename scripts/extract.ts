@@ -10,39 +10,42 @@ export async function extractStrings(url: string): Promise<Royal['name'][]> {
 
   const entries = await page.evaluate(() => {
     const nameElements = [...document.querySelectorAll('.article-body-content .body-h3')]
+    const elementAfterList = document.querySelector('.article-body-content .body-h3 ~ .embed-editorial-links')
 
-    if (!nameElements.length) {
+    if (!nameElements.length || elementAfterList === null) {
+      // throw Error('Headlines or last element not found');
       return [];
     }
 
-    const royals = nameElements.map((nameElement, index, collection) => {
+    const royals = nameElements.flatMap((nameElement, index, collection) => {
       const isLastElement = collection.length - 1 === index
 
       // const title = nameElement.textContent || '';
       const parentElement = nameElement.parentElement
 
       if (parentElement === null) {
-        return
+        return []
       }
 
       const childElements = [...parentElement.children]
 
       const start = childElements.findIndex((child) => child === nameElement)
       const end = isLastElement
-        ? childElements.findIndex((child) => child === collection[collection.length - 1]) // todo
+        ? childElements.findIndex((child) => child === elementAfterList.previousElementSibling)
         : childElements.findIndex((child) => child === collection[index + 1])
 
-      console.log(childElements[start].textContent)
-      console.log(start, end)
+      console.log(childElements[start].textContent, start, end)
 
       const children = childElements.slice(start, end);
 
       children.forEach((child) => {
         // console.log(child.textContent)
       })
+
+      return children
     })
 
-    const names = nameElements.flatMap(({textContent}) => textContent !== null ? [textContent] : []);
+    const names = nameElements.flatMap(({textContent}) => textContent !== null ? textContent : []);
 
     return names;
   });
