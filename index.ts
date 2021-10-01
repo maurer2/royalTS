@@ -1,13 +1,13 @@
-import dotenv from 'dotenv'
-dotenv.config()
+import dotenv from "dotenv";
 
-import {extractStrings} from './scripts/extract'
+import { extractStrings } from "./scripts/extract";
 
-const url = <string>process.env.URL
-console.log(url);
+dotenv.config();
+
+const url = <string>process.env.URL;
 
 (async () => {
   const names = await extractStrings(url);
 
-  console.log(names)
+  console.log(names);
 })();
