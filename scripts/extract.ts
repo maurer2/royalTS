@@ -1,7 +1,7 @@
 import puppeteer from 'puppeteer';
-import type {RoyalRaw} from '../types';
+import type {RoyalRaw, Royal} from '../types';
 
-export async function extractStrings(url: string): Promise<string[]> {
+export async function extractStrings(url: string): Promise<Royal['name'][]> {
   const browser = await puppeteer.launch({dumpio: true});
   const page = await browser.newPage();
 
@@ -15,7 +15,9 @@ export async function extractStrings(url: string): Promise<string[]> {
       return [];
     }
 
-    const royals = nameElements.map((nameElement) => {
+    const royals = nameElements.map((nameElement, index, collection) => {
+      const isLastElement = collection.length - 1 === index
+
       // const title = nameElement.textContent || '';
       const parentElement = nameElement.parentElement
 
@@ -24,14 +26,19 @@ export async function extractStrings(url: string): Promise<string[]> {
       }
 
       const childElements = [...parentElement.children]
-      const startIndex = childElements.findIndex((child) => child === nameElement)
-      const endIndex = startIndex + 1 // temp
 
-      const children = childElements.slice(startIndex, endIndex);
+      const start = childElements.findIndex((child) => child === nameElement)
+      const end = isLastElement
+        ? childElements.findIndex((child) => child === collection[collection.length - 1]) // todo
+        : childElements.findIndex((child) => child === collection[index + 1])
 
-      console.log(startIndex, endIndex)
+      console.log(childElements[start].textContent)
+      console.log(start, end)
+
+      const children = childElements.slice(start, end);
+
       children.forEach((child) => {
-        console.log(child.textContent)
+        // console.log(child.textContent)
       })
     })
 
