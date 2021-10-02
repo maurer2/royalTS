@@ -7,7 +7,10 @@ dotenv.config();
 const url = <string>process.env.URL;
 
 (async () => {
-  const names = await extractElements(url);
+  const elements = await extractElements(url);
 
-  console.log(names);
+  elements.forEach((element) => {
+    console.log(element);
+    // console.log(element.elements[0].textContent);
+  });
 })();

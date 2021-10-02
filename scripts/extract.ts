@@ -1,7 +1,7 @@
 import puppeteer from "puppeteer";
-import type { RoyalRaw, Royal } from "../types";
+import type { RawElement } from "../types";
 
-export async function extractElements(url: string): Promise<Royal["name"][]> {
+export async function extractElements(url: string): Promise<RawElement[]> {
   const browser = await puppeteer.launch({ dumpio: true });
   const page = await browser.newPage();
 
@@ -28,7 +28,7 @@ export async function extractElements(url: string): Promise<Royal["name"][]> {
 
     const numberOfPeople = nameElements.length;
 
-    const entriesGroupedByPerson = nameElements.flatMap((nameElement, index, collection) => {
+    const entriesGrouped = nameElements.flatMap((nameElement, index, collection) => {
       const isLastIteration = index === numberOfPeople - 1;
       const nextElement = isLastIteration ? lastElementInList : collection[index + 1];
 
@@ -48,22 +48,18 @@ export async function extractElements(url: string): Promise<Royal["name"][]> {
         return [];
       }
 
-      console.log(childElements[start].textContent, start, end);
+      const key = childElements[start].textContent || "";
+      const values = childElements.slice(start, end).map((child) => child.textContent || "");
 
-      const children = childElements.slice(start, end);
+      const rawElement: RawElement = {
+        key,
+        values,
+      };
 
-      // children.forEach((child) => {
-      // console.log(child.textContent)
-      // });
-
-      return children;
+      return [rawElement];
     });
 
-    const names = nameElements.flatMap(({ textContent }) =>
-      textContent !== null ? textContent : []
-    );
-
-    return names;
+    return entriesGrouped;
   });
 
   await browser.close();
