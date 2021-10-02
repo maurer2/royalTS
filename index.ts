@@ -1,13 +1,13 @@
 import dotenv from "dotenv";
 
-import { extractStrings } from "./scripts/extract";
+import { extractElements } from "./scripts/extract";
 
 dotenv.config();
 
 const url = <string>process.env.URL;
 
 (async () => {
-  const names = await extractStrings(url);
+  const names = await extractElements(url);
 
   console.log(names);
 })();

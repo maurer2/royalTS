@@ -1,7 +1,7 @@
 import puppeteer from "puppeteer";
 import type { RoyalRaw, Royal } from "../types";
 
-export async function extractStrings(url: string): Promise<Royal["name"][]> {
+export async function extractElements(url: string): Promise<Royal["name"][]> {
   const browser = await puppeteer.launch({ dumpio: true });
   const page = await browser.newPage();
 
@@ -9,6 +9,7 @@ export async function extractStrings(url: string): Promise<Royal["name"][]> {
   await page.waitForSelector(".article-body-content");
 
   const entries = await page.evaluate(() => {
+    // start of each person block
     const nameElements = [...document.querySelectorAll(".article-body-content .body-h3")];
     const elementAfterList = document.querySelector(
       ".article-body-content .body-h3 ~ .embed-editorial-links"
@@ -19,12 +20,21 @@ export async function extractStrings(url: string): Promise<Royal["name"][]> {
       return [];
     }
 
-    const royals = nameElements.flatMap((nameElement, index, collection) => {
-      const isLastElement = collection.length - 1 === index;
+    const lastElementInList = elementAfterList.previousElementSibling;
 
-      // const title = nameElement.textContent || '';
+    if (lastElementInList === null) {
+      return [];
+    }
+
+    const numberOfPeople = nameElements.length;
+
+    const entriesGroupedByPerson = nameElements.flatMap((nameElement, index, collection) => {
+      const isLastIteration = index === numberOfPeople - 1;
+      const nextElement = isLastIteration ? lastElementInList : collection[index + 1];
+
       const { parentElement } = nameElement;
 
+      // https://stackoverflow.com/questions/65050515/in-which-cases-will-element-parentelement-or-element-parentnode-be-null-in-a-htm
       if (parentElement === null) {
         return [];
       }
@@ -32,9 +42,11 @@ export async function extractStrings(url: string): Promise<Royal["name"][]> {
       const childElements = [...parentElement.children];
 
       const start = childElements.findIndex((child) => child === nameElement);
-      const end = isLastElement
-        ? childElements.findIndex((child) => child === elementAfterList.previousElementSibling)
-        : childElements.findIndex((child) => child === collection[index + 1]);
+      const end = childElements.findIndex((child) => child === nextElement);
+
+      if (start === -1 || end === -1) {
+        return [];
+      }
 
       console.log(childElements[start].textContent, start, end);
 
