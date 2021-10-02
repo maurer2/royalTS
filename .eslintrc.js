@@ -9,7 +9,8 @@ module.exports = {
         "plugin:@typescript-eslint/eslint-recommended",
         "airbnb-base",
         "airbnb-typescript/base",
-        "plugin:import/recommended"
+        "plugin:import/recommended",
+        "plugin:prettier/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -26,6 +27,6 @@ module.exports = {
         "import/prefer-default-export": "off",
         "no-console": "warn",
         "quotes": ["error", "double"],
-        "@typescript-eslint/quotes": ["error", "double"]
+        "@typescript-eslint/quotes": ["error", "double"],
     }
 };

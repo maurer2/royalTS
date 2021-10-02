@@ -10,7 +10,9 @@ export async function extractStrings(url: string): Promise<Royal["name"][]> {
 
   const entries = await page.evaluate(() => {
     const nameElements = [...document.querySelectorAll(".article-body-content .body-h3")];
-    const elementAfterList = document.querySelector(".article-body-content .body-h3 ~ .embed-editorial-links");
+    const elementAfterList = document.querySelector(
+      ".article-body-content .body-h3 ~ .embed-editorial-links"
+    );
 
     if (!nameElements.length || elementAfterList === null) {
       // throw Error('Headlines or last element not found');
@@ -45,7 +47,9 @@ export async function extractStrings(url: string): Promise<Royal["name"][]> {
       return children;
     });
 
-    const names = nameElements.flatMap(({ textContent }) => (textContent !== null ? textContent : []));
+    const names = nameElements.flatMap(({ textContent }) =>
+      textContent !== null ? textContent : []
+    );
 
     return names;
   });
