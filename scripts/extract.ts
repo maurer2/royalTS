@@ -26,11 +26,9 @@ export async function extractElements(url: string): Promise<RawElement[]> {
       return [];
     }
 
-    const numberOfPeople = nameElements.length;
-
-    const entriesGrouped = nameElements.flatMap((nameElement, index, collection) => {
-      const isLastIteration = index === numberOfPeople - 1;
-      const nextElement = isLastIteration ? lastElementInList : collection[index + 1];
+    const entriesGrouped = nameElements.flatMap((nameElement, index) => {
+      const isLastIteration = index === nameElements.length - 1;
+      const nextElement = isLastIteration ? lastElementInList : nameElements[index + 1];
 
       const { parentElement } = nameElement;
 
@@ -55,7 +53,7 @@ export async function extractElements(url: string): Promise<RawElement[]> {
         // remove image and empty tags
         .filter((child) => {
           const isTextElement = child.classList.contains("body-text");
-          const isNotEmpty = child.textContent !== null && child.textContent.length !== 0;
+          const isNotEmpty = child.textContent?.length !== 0;
 
           return [isTextElement, isNotEmpty].every((check) => Boolean(check));
         })
