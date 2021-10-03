@@ -49,7 +49,18 @@ export async function extractElements(url: string): Promise<RawElement[]> {
       }
 
       const key = childElements[start].textContent || "";
-      const values = childElements.slice(start, end).map((child) => child.textContent || "");
+      const values = childElements
+        // extract elements that belong to current person
+        .slice(start, end)
+        // remove image and empty tags
+        .filter((child) => {
+          const isTextElement = child.classList.contains("body-text");
+          const isNotEmpty = child.textContent !== null && child.textContent.length !== 0;
+
+          return [isTextElement, isNotEmpty].every((check) => Boolean(check));
+        })
+        // extract inner text
+        .map((child) => child.textContent || "");
 
       const rawElement: RawElement = {
         key,
