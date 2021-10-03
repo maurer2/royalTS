@@ -1,0 +1,255 @@
+[
+    {
+        "key": "Queen Elizabeth II",
+        "values": [
+            "Full name: Elizabeth Alexandra Mary",
+            "Date of birth: 21 April 1926",
+            "Family position: Monarch",
+            "Place in line of succession: Currently on the throne",
+            "Best known title: Her Majesty the Queen",
+            "Other titles: She has 16 different regnal titles, one for each of the current Commonwealth realms, but they're all pretty similar to this: 'Elizabeth the Second, by the Grace of God, Queen of [insert different country names] and of Her other Realms and Territories, Head of the Commonwealth.'",
+            "Lives in: Buckingham Palace and Windsor Castle – the Queen divides her time between the two residences. She spends Christmas at Sandringham Estate and her summer holiday at Balmoral Castle in Scotland."
+        ]
+    },
+    {
+        "key": "Prince Charles",
+        "values": [
+            "Full name: Charles Philip Arthur George",
+            "Date of birth: 14 November 1948",
+            "Family position: Charles is the eldest child of Queen Elizabeth II.",
+            "Place in line of succession: Charles is the heir apparent to the British throne – the first in the order of succession.",
+            "Best known title: His Royal Highness the Prince of Wales",
+            "Other titles: Prince Charles is sometimes referred to as the Duke of Rothesay in Scotland. He is also occasionally called the Duke of Cornwall while in the southwest of England.",
+            "Lives in: Clarence House is his official London residence, but he also has a country home where he spends a lot of time, Highgrove House in Gloucestershire."
+        ]
+    },
+    {
+        "key": "Camilla, Duchess of Cornwall",
+        "values": [
+            "Full name: Born Camilla Rosemary Shand; after her first marriage, she was known as Camilla Parker Bowles.",
+            "Date of birth: 17 July 1947",
+            "Family position: Camilla is married to Prince Charles, the eldest child of Queen Elizabeth II.",
+            "Place in line of succession: N/A",
+            "Best known title: Her Royal Highness the Duchess of Cornwall",
+            "Other titles: In Scotland, Camilla is sometimes referred to as the Duchess of Rothesay, and is also sometimes called the Duchess of Cornwall while in the southwest of England. Techically, Camilla is the Princess of Wales, but when she married Charles, it was announced that her title wouldn't be styled that way – likely because there had already been a Princess of Wales, Diana.",
+            "Lives in: Clarence House, Camilla and Charles’ official London residence. The couple also often spend time at Highgrove House, their Gloucestershire home."
+        ]
+    },
+    {
+        "key": "Prince William",
+        "values": [
+            "Full name: William Arthur Philip Louis",
+            "Date of birth: 21 June 1982",
+            "Family position: William is the eldest son of Prince Charles, and the grandson of Queen Elizabeth II.",
+            "Place in line of succession: 2nd",
+            "Best known title: His Royal Highness the Duke of Cambridge",
+            "Other titles: While in Scotland, Prince William is sometimes called the Earl of Strathearn, and also Baron Carrickfergus while in Northern Ireland.",
+            "Lives in: A four-storey home at Kensington Palace known as Apartment 1A. William and his family also spend a lot of time at their Norfolk country estate, Anmer Hall."
+        ]
+    },
+    {
+        "key": "Catherine, Duchess of Cambridge",
+        "values": [
+            "Full name: Born Catherine Elizabeth Middleton",
+            "Date of birth: 9 January 1982",
+            "Family position: Kate is the wife of Prince William, who is the son of Prince Charles and the grandson of Queen Elizabeth II.",
+            "Place in line of succession: N/A",
+            "Best known title: Her Royal Highness the Duchess of Cambridge",
+            "Other titles: Kate is sometimes called the Countess of Strathearn while she’s in Scotland, and may be referred to as Lady Carrickfergus while in Northern Ireland.",
+            "Lives in: An apartment in Kensington Palace, with William and their children. They also spend time at Anmer Hall, their country home in Norfolk."
+        ]
+    },
+    {
+        "key": "Prince George",
+        "values": [
+            "Full name: George Alexander Louis",
+            "Date of birth: 22 July 2013",
+            "Family position: George is the first child of Prince William and Kate Middleton, the grandson of Prince Charles and the great-grandson of Queen Elizabeth II.",
+            "Place in line of succession: 3rd",
+            "Best known title: His Royal Highness Prince George of Cambridge",
+            "Other titles: None",
+            "Lives in: The Cambridges’ apartment in Kensington Palace. The family also spend time at Anmer Hall, their Norfolk country home."
+        ]
+    },
+    {
+        "key": "Princess Charlotte",
+        "values": [
+            "Full name: Charlotte Elizabeth Diana",
+            "Date of birth: 2 May 2015",
+            "Family position: Charlotte is Prince William’s daughter, the granddaughter of Prince Charles and the great-granddaughter of Queen Elizabeth II.",
+            "Place in line of succession: 4th",
+            "Best known title: Her Royal Highness Princess Charlotte of Cambridge ",
+            "Lives in: The Cambridges’ apartment in Kensington Palace. The family also spend time at Anmer Hall, their Norfolk country home."
+        ]
+    },
+    {
+        "key": "Prince Louis",
+        "values": [
+            "Full name: Louis Arthur Charles",
+            "Date of birth: 23 April 2018",
+            "Family position: Louis is the youngest child of Prince William, the grandson of Prince Charles and the great-grandson of Queen Elizabeth II.",
+            "Place in line of succession: 5th",
+            "Best known title: His Royal Highness Prince Louis of Cambridge",
+            "Other titles: N/A",
+            "Lives in: The Cambridges’ apartment in Kensington Palace. The family also spend time at Anmer Hall, their Norfolk country home."
+        ]
+    },
+    {
+        "key": "Prince Harry",
+        "values": [
+            "Full name: Henry Charles Albert David",
+            "Date of birth: 15 September 1984",
+            "Family position: Harry is the second son of Prince Charles and the grandson of Queen Elizabeth II.",
+            "Place in line of succession: 6th",
+            "Best known title: His Royal Highness the Duke of Sussex",
+            "Other titles: Harry is sometimes called the Earl of Dumbarton in Scotland, as well as Baron Kilkeel while in Northern Ireland.",
+            "Lives in: Santa Barbara, California, where he moved with his wife Meghan after they stepped back from their roles as working members of the royal family. Their home is reportedly worth £11.2 million."
+        ]
+    },
+    {
+        "key": "Meghan, Duchess of Sussex",
+        "values": [
+            "Full name: Meghan isn’t actually her first name – she was born Rachel Meghan Markle.",
+            "Date of birth: 4 August 1981",
+            "Family position: Married to Prince Harry, son of Prince Charles and grandson of Queen Elizabeth II",
+            "Place in line of succession: N/A",
+            "Best known title: Her Royal Highness the Duchess of Sussex",
+            "Other titles: Meghan will sometimes be referred to as the Countess of Dumbarton in Scotland and Baroness Kilkeel in Northern Ireland.",
+            "Lives in: Santa Barbara, California, with Harry and their son Archie and daughter Lili. The family live in a mansion set within a gated community."
+        ]
+    },
+    {
+        "key": "Archie Mountbatten-Windsor",
+        "values": [
+            "Full name: Archie Harrison Mountbatten-Windsor",
+            "Date of birth: 6 May 2019",
+            "Family position: Archie is the first child of Prince Harry, grandson of Prince Charles and great-grandson of Queen Elizabeth II.",
+            "Place in line of succession: 7th",
+            "Best known title: Master Archie Harrison Mountbatten-Windsor – Archie currently doesn't have a royal title. Prince Harry and Meghan had several surname options to choose from, but ultimately went with Mountbatten-Windsor, which is available to descendants of Prince Philip and the Queen.",
+            "Other titles: None",
+            "Lives in: Santa Barbara, California, with his parents Meghan Markle and Prince Harry and his baby sister."
+        ]
+    },
+    {
+        "key": "Lilibet Mountbatten-Windsor",
+        "values": [
+            "Full name: Lilibet Diana Mountbatten-Windsor",
+            "Date of birth: 4 June 2021",
+            "Family position: Lilibet is Archie's little sister, making her the second child of Prince Harry and Meghan Markle.",
+            "Place in line of succession: 8th",
+            "Best known title: Miss Lilibet Diana Mountbatten-Windsor – Lili also doesn't have a royal title, but may be entitled to be referred to as a princess once her grandfather, Prince Charles, becomes king.",
+            "Other titles: None",
+            "Lives in: Santa Barbara, California, where she was born."
+        ]
+    },
+    {
+        "key": "Princess Anne",
+        "values": [
+            "Full name: Anne Elizabeth Alice Louise",
+            "Date of birth: 15 August 1950",
+            "Family position: Anne is the second child – and only daughter – of Queen Elizabeth II.",
+            "Place in line of succession: 16th",
+            "Best known title: Her Royal Highness the Princess Royal",
+            "Other titles: Princess Anne, which was how her title was styled before she became the Princess Royal.",
+            "Lives in: Gatcombe Park in Gloucestershire, with her husband Sir Timothy Laurence and her daughter and son-in-law, Zara and Mike Tindall."
+        ]
+    },
+    {
+        "key": "Prince Andrew",
+        "values": [
+            "Full name: Andrew Albert Christian Edward",
+            "Date of birth: 19 February 1960",
+            "Family position: Andrew is the third child of Queen Elizabeth II.",
+            "Place in line of succession: 9th",
+            "Best known title: His Royal Highness the Duke of York",
+            "Other titles: Andrew can be referred to as the Earl of Inverness in Scotland, and as Baron Killyleagh in Northern Ireland.",
+            "Lives in: The Royal Lodge in Windsor, with his ex-wife Sarah Ferguson."
+        ]
+    },
+    {
+        "key": "Princess Beatrice",
+        "values": [
+            "Full name: Beatrice Elizabeth Mary",
+            "Date of birth: 8 August 1988",
+            "Family position: Beatrice is the daughter of Prince Andrew and the granddaughter of Queen Elizabeth II.",
+            "Place in line of succession: 10th",
+            "Best known title: Her Royal Highness Princess Beatrice, Mrs Edoardo Mapelli Mozzi. When Beatrice married her husband she dropped, “of York” from her title and added her husband’s name instead.",
+            "Other titles: Beatrice’s title at birth was Her Royal Highness Princess Beatrice of York.",
+            "Lives in: St James’s Palace in London, with her husband. The property is convenient for the couple as Edoardo’s son Wolfie lives close by in west London. Before her marriage, Beatrice lived here with her sister, Eugenie. "
+        ]
+    },
+    {
+        "key": "Princess Eugenie",
+        "values": [
+            "Full name: Eugenie Victoria Helena",
+            "Date of birth: 23 March 1990",
+            "Family position: Eugenie is Prince Andrew’s daughter and the granddaughter of Queen Elizabeth II.",
+            "Place in line of succession: 11th",
+            "Best known title: Her Royal Highness Princess Eugenie, Mrs. Jack Brooksbank. Like her sister Beatrice, when Eugenie married her husband Jack Brooksbank, she dropped the “of York” from her original title, adding her husband's name instead.",
+            "Other titles: Eugenie’s title before her marriage was Her Royal Highness Princess Eugenie of York.",
+            "Lives in: Frogmore Cottage in Windsor (the former home of Prince Harry and Meghan Markle)."
+        ]
+    },
+    {
+        "key": "August Brooksbank",
+        "values": [
+            "Full name: August Philip Hawke Brooksbank",
+            "Date of birth: 9 February 2021",
+            "Family position: August is the first child of Princess Eugenie and Jack Brooksbank.",
+            "Place in line of succession: 12th",
+            "Best known title: Master August Brooksbank. August doesn’t have a royal title, as these can only be inherited from male heirs.",
+            "Other titles: None",
+            "Lives in: Frogmore Cottage in Windsor, with his parents."
+        ]
+    },
+    {
+        "key": "Prince Edward",
+        "values": [
+            "Full name: Edward Anthony Richard Louis",
+            "Date of birth: 10 March 1964",
+            "Family position: Edward is the youngest child of Queen Elizabeth II.",
+            "Place in line of succession: 13th",
+            "Best known title:  His Royal Highness the Earl of Wessex",
+            "Other titles: Edward is sometimes referred to as the Earl of Forfar in Scotland.",
+            "Lives in: Bagshot Park in Surrey, with his wife Sophie and their children Louise and James."
+        ]
+    },
+    {
+        "key": "Sophie, Countess of Wessex",
+        "values": [
+            "Full name: Born Sophie Helen Rhys-Jones",
+            "Date of birth: 20 January 1965",
+            "Family position: Sophie is married to Prince Edward, who is Queen Elizabeth II's youngest child.",
+            "Place in line of succession: N/A",
+            "Best known title: Her Royal Highness the Countess of Wessex",
+            "Other titles: Sophie is sometimes referred to as the Countess of Forfar in Scotland.",
+            "Lives in: Bagshot Park in Surrey, with Prince Edward and their two children, Louise and James."
+        ]
+    },
+    {
+        "key": "Lady Louise Mountbatten-Windsor",
+        "values": [
+            "Full name: Louise Alice Elizabeth Mary Mountbatten-Windsor",
+            "Date of birth: 8 November 2003",
+            "Family position: Louise is Prince Edward’s daughter and the granddaughter of Queen Elizabeth II.",
+            "Place in line of succession: 15th",
+            "Best known title: Lady Louise Windsor. When Louise’s parents Prince Edward and Sophie married, they decided with the Queen’s approval that their children would gain the courtesy titles of the children of an earl, rather than Prince or Princess.",
+            "Other titles: None",
+            "Lives in: Bagshot Park in Surrey, the residence of her parents Prince Edward and Sophie, Countess of Wessex."
+        ]
+    },
+    {
+        "key": "James, Viscount Severn",
+        "values": [
+            "Full name: James Alexander Philip Theo Mountbatten-Windsor",
+            "Date of birth: 17 December 2007",
+            "Family position: James is the son of Prince Edward and the grandson of Queen Elizabeth II.",
+            "Place in line of succession: 14th",
+            "Best known title: James, Viscount Severn. As with his older sister, Lady Louise Windsor, James received the courtesy titles of the son of an earl, with the Queen’s approval.",
+            "Other titles: None",
+            "Lives in: Bagshot Park in Surrey, the residence of his parents Prince Edward and Sophie, Countess of Wessex.",
+            "The latest issue of Cosmopolitan UK is out now and you canSUBSCRIBE HERE.",
+            "Like this article? Sign up to our newsletter to get more articles like this delivered straight to your inbox. "
+        ]
+    }
+]
