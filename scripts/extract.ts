@@ -1,13 +1,21 @@
-import puppeteer from "puppeteer";
+import puppeteer, { Browser, Page } from "puppeteer";
 import type { RawElement } from "../types";
 
-export async function extractElements(url: string): Promise<RawElement[]> {
-  const browser = await puppeteer.launch({ dumpio: true });
+async function getPage(url: string, browser: Browser): Promise<Page> {
   const page = await browser.newPage();
 
+  await page.setViewport({
+    width: 1920,
+    height: 1080,
+    deviceScaleFactor: 1,
+  });
   await page.goto(url);
   await page.waitForSelector(".article-body-content");
 
+  return page;
+}
+
+async function getEntries(page: Page): Promise<RawElement[]> {
   const entries = await page.evaluate(() => {
     // start of each person block
     const nameElements = [...document.querySelectorAll(".article-body-content .body-h3")];
@@ -71,7 +79,32 @@ export async function extractElements(url: string): Promise<RawElement[]> {
     return entriesGrouped;
   });
 
-  await browser.close();
-
   return entries;
+}
+
+export async function getElements(url: string): Promise<RawElement[]> {
+  let browser;
+  try {
+    browser = await puppeteer.launch({ dumpio: true });
+
+    let page;
+    try {
+      page = await getPage(url, browser);
+    } catch (error) {
+      throw new Error(error as string);
+    }
+
+    let entries;
+    try {
+      entries = await getEntries(page);
+    } catch (error) {
+      throw new Error(error as string);
+    }
+
+    await browser.close();
+
+    return entries;
+  } catch (error) {
+    throw new Error(error as string);
+  }
 }

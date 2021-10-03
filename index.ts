@@ -1,16 +1,20 @@
 import dotenv from "dotenv";
 
-import { extractElements } from "./scripts/extract";
+import { getElements } from "./scripts/extract";
 
 dotenv.config();
 
-const url = <string>process.env.URL;
+const url = process.env.URL as string;
 
 (async () => {
-  const elements = await extractElements(url);
+  try {
+    const elements = await getElements(url);
 
-  elements.forEach((element) => {
-    console.log(element);
-    // console.log(element.elements[0].textContent);
-  });
+    elements.forEach((element) => {
+      console.log(element);
+      // console.log(element.elements[0].textContent);
+    });
+  } catch (error) {
+    console.log(error);
+  }
 })();
