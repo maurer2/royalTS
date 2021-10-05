@@ -3,6 +3,7 @@ import path from "path";
 
 import { getElements } from "./scripts/extract";
 import { exportJSON } from "./scripts/export";
+import { mapEntries } from "./scripts/map";
 
 dotenv.config();
 
@@ -13,10 +14,7 @@ const filepath = path.join(__dirname, "dist", "royals.json");
   try {
     const elements = await getElements(url);
 
-    elements.forEach((element) => {
-      console.log(element);
-      // console.log(element.elements[0].textContent);
-    });
+    mapEntries(elements);
 
     const elementsStringified = JSON.stringify(elements, null, 4);
 
