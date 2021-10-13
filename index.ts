@@ -12,13 +12,12 @@ const filepath = path.join(__dirname, "dist", "royals.json");
 
 (async () => {
   try {
-    const elements = await getElements(url);
+    // const elements = await getElements(url);
+    // const elementsStringified = JSON.stringify(elements, null, 4);
 
-    mapEntries(elements);
+    mapEntries();
 
-    const elementsStringified = JSON.stringify(elements, null, 4);
-
-    exportJSON(filepath, elementsStringified);
+    // exportJSON(filepath, elementsStringified);
   } catch (error) {
     console.log(error);
   }

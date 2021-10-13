@@ -1,12 +1,16 @@
 import { pipe } from "fp-ts/function";
 import type { RawElement } from "../types";
 
-function mapName(name: string): string {
-  return name.trim();
-}
+import royalsJSON from "../dist/royals.json";
 
-export async function mapEntries(elements: RawElement[]): Promise<void> {
-  const [firstEntry] = elements;
+const royals: RawElement[] = royalsJSON;
+
+// function mapName(name: string): string {
+//   return name.trim();
+// }
+
+export async function mapEntries(): Promise<void> {
+  const [firstEntry] = royals;
 
   const name = pipe(
     firstEntry,
